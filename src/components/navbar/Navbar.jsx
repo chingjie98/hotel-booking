@@ -5,12 +5,14 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <div className="logo">
-          AIRBNB
-        </div>
-        <div className="navButtons">
-          <button>LOGIN</button>
-          <button>REGISTER</button>
+        <div className="navbarContainer">
+          <div className="logo">
+            AIRBNB
+          </div>
+          <div className="navButtons">
+            <button>LOGIN</button>
+            <button>REGISTER</button>
+          </div>
         </div>
       </div>
     </>

@@ -1,12 +1,20 @@
-
 .navbar{
   height: 50px;
-  background-color: darkblue;
+  background-color: rgb(5,32,60);
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   color: white;
 }
+
+.navbarContainer{
+  height: 50px;
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 .logo{
   font-weight: 900px;
@@ -17,5 +25,5 @@ button{
   cursor: pointer;
   border: none;
   padding: 5px 10px;
-  color: #6045fa
+  color: rgb(5,32,60)
 }
