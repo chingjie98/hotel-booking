@@ -11,8 +11,8 @@ function App() {
       <main>
         <Routes>
           <Route path = "/" element = {<Home/>}></Route>
-          <Route path = "/hotel" element = {<Hotel/>}></Route>
-          <Route path = "/list" element = {<List/>}></Route>
+          <Route path = "/hotels" element = {<List/>}></Route>
+          <Route path = "/hotel/:id" element = {<Hotel/>}></Route>
         </Routes>
       </main>
     </BrowserRouter>
