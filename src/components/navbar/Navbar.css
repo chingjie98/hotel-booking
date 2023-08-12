@@ -1,12 +1,21 @@
 
 .navbar{
   height: 50px;
-  background-color: aqua;
+  background-color: darkblue;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: white;
 }
 
-.yolo{
-  margin-left: 20px;
+.logo{
+  font-weight: 900px;
+}
+
+button{
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  color: #6045fa
 }

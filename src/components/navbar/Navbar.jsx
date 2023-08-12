@@ -5,8 +5,10 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        AIRBNB
-        <div className="yolo">
+        <div className="logo">
+          AIRBNB
+        </div>
+        <div className="navButtons">
           <button>LOGIN</button>
           <button>REGISTER</button>
         </div>
