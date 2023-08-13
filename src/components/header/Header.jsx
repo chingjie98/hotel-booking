@@ -13,7 +13,7 @@ const Header = () => {
       <div className="header">
         <div className="headerContainer">
           <div className="headerListItems">
-            <div className="headerListItem">
+            <div className="headerListItem active">
               <FontAwesomeIcon icon={faBed} /> Stays
             </div>
             <div className="headerListItem">
@@ -29,6 +29,10 @@ const Header = () => {
               <FontAwesomeIcon icon={faTaxi} /> Airport Taxis
             </div>
           </div>
+
+          <h1 className="headerTitle">A lifetime of discounts? It's Genius.</h1>
+          <p className="headerDesc">Get rewarded for your travels - unlock instant savings of 10% or more with a free booking account</p>
+          <button className="headerButton">Sign in / Register</button>
         </div>
       </div>
     </>

@@ -10,8 +10,8 @@ const Navbar = () => {
             AIRBNB
           </div>
           <div className="navButtons">
-            <button>LOGIN</button>
-            <button>REGISTER</button>
+            <button className = 'navbarButton'>LOGIN</button>
+            <button className = 'navbarButton'>REGISTER</button>
           </div>
         </div>
       </div>

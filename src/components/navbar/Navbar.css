@@ -20,7 +20,7 @@
   font-weight: 900px;
 }
 
-button{
+.navbarButton{
   margin-left: 10px;
   cursor: pointer;
   border: none;
