@@ -7,15 +7,19 @@
   color: white;
 }
 
-.headerListItems{
+.headerContainer{
   width: 100%;
   max-width: 1024px;
+}
+
+.headerListItems{
   display: flex;
   gap: 40px;
+  margin: 10px 0px;
 }
 
 .headerListItem{
   display: flex;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 13px;
+  align-items: center;
 }
