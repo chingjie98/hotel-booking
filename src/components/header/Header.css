@@ -4,13 +4,14 @@
   display: flex;
   justify-content: center;
   color: white;
+  position:relative;
 }
 
 .headerContainer{
   width: 100%;
   max-width: 1024px;
-  margin-bottom: 80px;
-  position:relative;
+  margin-bottom: 50px;
+
 }
 
 .headerListItems{
@@ -47,5 +48,50 @@
 }
 
 .headerButton:hover{
-  background-color: rgba(145, 184, 243, 0.836);
+  background-color: #FFFDD0;
+}
+
+.headerSearch{
+  height: 30px;
+  color:black;
+  display: flex;
+  border: 3px solid #febb02;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px 0px;
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.headerSearchItem{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
+}
+
+.headerSearchIcon {
+  color: #aca2a2;
+}
+
+.headerSearchButton{
+  border: none;
+  padding: 7px;
+  background-color:rgb(5,32,60);
+  color: white;
+  cursor: pointer;
+}
+
+.headerSearchItem span{
+  color: #aca2a2;
+  cursor: pointer;
+}
+
+.date {
+  position: absolute;
+  top: 45px;
 }
