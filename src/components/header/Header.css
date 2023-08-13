@@ -95,3 +95,27 @@
   position: absolute;
   top: 45px;
 }
+
+.headerQuantity span{
+  color: black;
+  cursor:initial;
+}
+
+.headerQuantity{
+  background-color: lightblue;
+  padding: 10px;
+  position: absolute;
+  top: 45px;
+}
+
+.options{
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.optionsButtonContainer{
+  display: flex;
+  gap: 10px;
+}
+

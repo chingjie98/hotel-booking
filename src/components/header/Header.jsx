@@ -26,6 +26,12 @@ const Header = () => {
       key: 'selection'
     }
   ]);
+
+  const [options, setOptions] = useState({
+    adults : 2,
+    children : 2,
+    room: 1
+  });
   
   return (
     <>
@@ -73,8 +79,46 @@ const Header = () => {
             </div>
             <div className="headerSearchItem">
               <FontAwesomeIcon className = 'headerSearchIcon' icon={faPerson} /> 
-              <span>2 adults 2 children 1 room</span>
+              <span>{options.adults} adults {options.children} children {options.room} room</span>
+              <div className="headerQuantity">
+                  <div className="options">
+                    <span>Adults</span>
+                    <div className="optionsButtonContainer">
+                      <button onClick = {() => {
+                        setOptions({...options, adults : options.adults - 1})
+                      }}>-</button>
+                      <span>{options.adults}</span>
+                      <button onClick = {() => {
+                        setOptions({...options, adults : options.adults + 1})
+                      }}>+</button>
+                    </div>
+                  </div>
+                  <div className="options">
+                    <span>Children</span>
+                      <div className="optionsButtonContainer">
+                      <button onClick = {() => {
+                        setOptions({...options, children : options.children - 1})
+                      }}>-</button>
+                      <span>{options.children}</span>
+                      <button onClick = {() => {
+                        setOptions({...options, children : options.children + 1})
+                      }}>+</button>
+                    </div>
+                  </div>
+                  <div className="options">
+                    <span>Room</span>
+                    <div className="optionsButtonContainer">
+                      <button onClick = {() => {
+                        setOptions({...options, room : options.room - 1})
+                      }}>-</button>
+                      <span>{options.room}</span>
+                      <button onClick = {() => {
+                        setOptions({...options, room : options.room + 1})
+                      }}>+</button>
+                    </div>
+                  </div>
             </div>
+          </div>
             <div className="headerSearchItem">
               <button className = 'headerSearchButton'>Search</button>  
             </div>  
