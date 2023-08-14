@@ -11,7 +11,12 @@
   width: 100%;
   max-width: 1024px;
   margin-bottom: 50px;
+}
 
+.headerContainer.list{
+  width: 100%;
+  max-width: 1024px;
+  margin-bottom: 25px;
 }
 
 .headerListItems{
