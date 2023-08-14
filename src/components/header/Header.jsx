@@ -1,5 +1,4 @@
 import React from "react";
-import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBed } from "@fortawesome/free-solid-svg-icons";
 import { faPlane } from "@fortawesome/free-solid-svg-icons";
@@ -12,12 +11,14 @@ import { DateRange } from 'react-date-range';
 import {useState} from 'react'
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
+import "./Header.css";
 import {format} from 'date-fns';
 
 
 const Header = () => {
 
   const [openDate, setOpenDate] = useState(false);
+  const [openOptions, setOpenOptions] = useState(false);
   
   const [date, setDate] = useState([
     {
@@ -79,46 +80,46 @@ const Header = () => {
             </div>
             <div className="headerSearchItem">
               <FontAwesomeIcon className = 'headerSearchIcon' icon={faPerson} /> 
-              <span>{options.adults} adults {options.children} children {options.room} room</span>
-              <div className="headerQuantity">
-                  <div className="options">
-                    <span>Adults</span>
+              <span onClick = {() => {setOpenOptions(!openOptions)}}>{options.adults}  adult {options.children}  children {options.room}  room</span>
+              {openOptions && <div className="headerQuantity">
+                <div className="options">
+                  <span>Adults</span>
+                  <div className="optionsButtonContainer">
+                    <button disabled = {options.adults <= 1} onClick = {() => {
+                      setOptions({...options, adults : options.adults - 1})
+                    }}>-</button>
+                    <span>{options.adults}</span>
+                    <button onClick = {() => {
+                      setOptions({...options, adults : options.adults + 1})
+                    }}>+</button>
+                  </div>
+                </div>
+                <div className="options">
+                  <span>Children</span>
                     <div className="optionsButtonContainer">
-                      <button onClick = {() => {
-                        setOptions({...options, adults : options.adults - 1})
-                      }}>-</button>
-                      <span>{options.adults}</span>
-                      <button onClick = {() => {
-                        setOptions({...options, adults : options.adults + 1})
-                      }}>+</button>
-                    </div>
+                    <button disabled = {options.children <= 0} onClick = {() => {
+                      setOptions({...options, children : options.children - 1})
+                    }}>-</button>
+                    <span>{options.children}</span>
+                    <button onClick = {() => {
+                      setOptions({...options, children : options.children + 1})
+                    }}>+</button>
                   </div>
-                  <div className="options">
-                    <span>Children</span>
-                      <div className="optionsButtonContainer">
-                      <button onClick = {() => {
-                        setOptions({...options, children : options.children - 1})
-                      }}>-</button>
-                      <span>{options.children}</span>
-                      <button onClick = {() => {
-                        setOptions({...options, children : options.children + 1})
-                      }}>+</button>
-                    </div>
+                </div>
+                <div className="options">
+                  <span>Room</span>
+                  <div className="optionsButtonContainer">
+                    <button disabled = {options.room <= 1} onClick = {() => {
+                      setOptions({...options, room : options.room - 1})
+                    }}>-</button>
+                    <span>{options.room}</span>
+                    <button onClick = {() => {
+                      setOptions({...options, room : options.room + 1})
+                    }}>+</button>
                   </div>
-                  <div className="options">
-                    <span>Room</span>
-                    <div className="optionsButtonContainer">
-                      <button onClick = {() => {
-                        setOptions({...options, room : options.room - 1})
-                      }}>-</button>
-                      <span>{options.room}</span>
-                      <button onClick = {() => {
-                        setOptions({...options, room : options.room + 1})
-                      }}>+</button>
-                    </div>
-                  </div>
+                </div>
+              </div>}
             </div>
-          </div>
             <div className="headerSearchItem">
               <button className = 'headerSearchButton'>Search</button>  
             </div>  

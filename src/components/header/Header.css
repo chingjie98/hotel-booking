@@ -102,7 +102,6 @@
 }
 
 .headerQuantity{
-  background-color: lightblue;
   padding: 10px;
   position: absolute;
   top: 45px;
@@ -117,5 +116,30 @@
 .optionsButtonContainer{
   display: flex;
   gap: 10px;
+  width: 75px;
+  justify-content: space-between;
 }
 
+.optionsButtonContainer button{
+  padding: 2px;
+}
+
+.optionsButtonContainer button:disabled{
+  cursor: not-allowed;
+}
+
+.rdrDateDisplayWrapper {
+  width: 22em;
+}
+
+.rdrMonth{
+  width: 22em;
+}
+
+.rdrMonthAndYearWrapper{
+  width: 22em;
+}
+
+.rdrNextPrevButton{
+  margin: 0;
+}

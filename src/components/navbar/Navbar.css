@@ -27,3 +27,7 @@
   padding: 5px 10px;
   color: rgb(5,32,60)
 }
+
+.navbarButton:hover{
+  background-color: #FFFDD0;
+}
